@@ -1,5 +1,15 @@
 <!DOCTYPE html>
 <html>
+<?php 
+// session_start(); 
+
+if (!isset($_SESSION['username']) && !isset($_SESSION['status'])){
+	header("location:index.php");
+	$_SESSION['login'] = 'gagal';
+
+}
+
+?>
 <head>
 	<title></title>
 </head>

@@ -2,6 +2,13 @@
 
 session_start();
 
+
+if (!isset($_SESSION['username']) && !isset($_SESSION['status'])){
+	header("location:index.php");
+	$_SESSION['login'] = 'gagal';
+
+}
+
 $kode_barang = $_POST['kode_barang'];
 $nama_barang = $_POST['nama_barang'];
 $qty = $_POST['qty'];

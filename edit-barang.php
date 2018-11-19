@@ -2,6 +2,12 @@
 
 session_start();
 
+if (!isset($_SESSION['username']) && !isset($_SESSION['status'])){
+	header("location:index.php");
+	$_SESSION['login'] = 'gagal';
+
+}
+
 include('koneksi.php');
 
 $kode_barang = $_POST['kode_barang'];
